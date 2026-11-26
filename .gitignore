@@ -8,3 +8,8 @@ coverage/
 
 # Binary uploads are backed up separately from Git
 server/uploads/
+# Database backups
+backups/
+*.dump
+*.bak
+*.archive
