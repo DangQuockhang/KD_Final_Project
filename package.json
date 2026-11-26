@@ -11,17 +11,18 @@
   "scripts": {
     "dev:store": "npm run dev -w @kd/store",
     "dev:studio": "npm run dev -w @kd/studio",
-    "dev:api": "node tools/atlas-launch.mjs dev",
-    "db:check": "node tools/atlas-launch.mjs check",
-    "db:init": "node tools/atlas-launch.mjs init",
-    "db:seed": "node tools/atlas-launch.mjs no-seed",
+    "dev:api": "node tools/migration-not-ready.mjs",
+    "db:check": "node tools/migration-not-ready.mjs",
+    "db:init": "node tools/migration-not-ready.mjs",
+    "db:seed": "node tools/migration-not-ready.mjs",
     "test": "node --test tests/*.test.js",
     "build": "npm run build -w @kd/store && npm run build -w @kd/studio",
     "dev:gallery": "npm run dev -w @kd/store -- --open /gallery-demo.html",
-    "db:rollback:accounts": "node tools/atlas-launch.mjs no-rollback",
-    "db:rollback:membership": "node tools/atlas-launch.mjs no-rollback",
+    "db:rollback:accounts": "node tools/migration-not-ready.mjs",
+    "db:rollback:membership": "node tools/migration-not-ready.mjs",
     "dev:store:lan": "npm run dev -w @kd/store -- --mode lan --host 0.0.0.0 --port 5173 --strictPort",
-    "db:admin": "node tools/atlas-launch.mjs admin",
-    "atlas:source": "node tools/atlas-launch.mjs source"
+    "db:admin": "node tools/migration-not-ready.mjs",
+    "atlas:check": "npm --prefix tools/atlas-setup run check",
+    "atlas:init": "npm --prefix tools/atlas-setup run init"
   }
 }
